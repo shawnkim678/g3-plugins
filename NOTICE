@@ -1,0 +1,52 @@
+G3 Plugins - Apache-2.0 Attribution
+
+This repository contains skills derived from Anthropic's official Claude plugins,
+licensed under the Apache License 2.0.
+
+Derived Works:
+
+1. skills/frontend-design/SKILL.md
+   Source: anthropics/claude-plugins-official/plugins/frontend-design/skills/frontend-design/SKILL.md
+   License: Apache-2.0
+   Modified by: G3 Code contributors, 2026
+
+2. skills/code-review/SKILL.md
+   Sources:
+   - anthropics/claude-plugins-official/plugins/code-review/commands/code-review.md
+   - anthropics/claude-plugins-official/plugins/pr-review-toolkit/agents/code-reviewer.md
+   License: Apache-2.0
+   Modified by: G3 Code contributors, 2026
+
+3. skills/git-commit/SKILL.md
+   Sources:
+   - anthropics/claude-plugins-official/plugins/commit-commands/commands/commit.md
+   - anthropics/claude-plugins-official/plugins/commit-commands/commands/commit-push-pr.md
+   - anthropics/claude-plugins-official/plugins/commit-commands/commands/clean_gone.md
+   License: Apache-2.0
+   Modified by: G3 Code contributors, 2026
+
+4. skills/feature-dev/SKILL.md
+   Sources:
+   - anthropics/claude-plugins-official/plugins/feature-dev/commands/feature-dev.md
+   - anthropics/claude-plugins-official/plugins/feature-dev/agents/code-architect.md
+   - anthropics/claude-plugins-official/plugins/feature-dev/agents/code-explorer.md
+   - anthropics/claude-plugins-official/plugins/feature-dev/agents/code-reviewer.md
+   License: Apache-2.0
+   Modified by: G3 Code contributors, 2026
+
+5. skills/code-simplifier/SKILL.md
+   Source: anthropics/claude-plugins-official/plugins/code-simplifier/agents/code-simplifier.md
+   License: Apache-2.0
+   Modified by: G3 Code contributors, 2026
+
+All modifications for G3 Code include:
+- Removal of Claude Code-specific features (allowed-tools, agents, Task tool, slash commands)
+- Adaptation to G3 Code tool set (Read, Write, Edit, Bash, PowerShell, Glob, Grep, etc.)
+- Conversion of agent-based workflows to sequential skill phases with direct tool execution
+- Addition of G3 Code-specific guidance and best practices
+- Updated documentation for G3 Code compatibility
+
+The Apache License 2.0 text is available in LICENSES/Apache-2.0.txt
+
+For the original source code, visit:
+https://github.com/anthropics/claude-plugins-official

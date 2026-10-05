@@ -1,0 +1,8 @@
+{
+  "name": "g3-essentials",
+  "version": "0.1.0",
+  "description": "G3 Code 필수 스킬 묶음 — 오피스 문서(docx·pptx·xlsx·pdf), 프론트엔드 디자인, 코드 리뷰·보안 점검·테스트(TDD)·디버깅·커밋/PR·기능 개발·코드 단순화",
+  "author": { "name": "G3 Code contributors" },
+  "license": "MIT AND Apache-2.0",
+  "repository": "https://github.com/shawnkim678/g3-plugins"
+}
