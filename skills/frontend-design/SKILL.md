@@ -70,3 +70,10 @@ Use active voice as default. A CTA says exactly what happens when it is used: "S
 Treat failure and emptiness as moments for direction, not mood. Explain what went wrong and how to fix it, in the interface's voice rather than a person's. Errors don't apologize, and they are never vague about what happened. An empty screen is an invitation to act.
 
 Keep the tone conversational: plain verbs, sentence case, no filler, with tone matched to the brand and the audience. Let each written element do exactly one job.
+
+## G3 Code 점검 단계 (웹페이지·웹앱 완료 전 — 추가)
+- 서버가 있는 웹앱이면 모든 화면 경로를 한 번씩 요청해 **200** 인지 확인한다(FastAPI 는 `TestClient(app).get(path)`). 500 이면 끝난 것이 아니다.
+  FastAPI 템플릿은 `templates.TemplateResponse(request, "index.html", {...})` — request 가 첫 인자(옛 `TemplateResponse("index.html", {"request": request})` 는 현재 Starlette 에서 오류).
+- 사용자 데이터를 `onclick="f('${...}')"` 같은 **인라인 이벤트 속성에 넣지 않는다**(HTML 이스케이프는 `'` 를 막지 못해 스크립트 주입). `data-id` 속성 + `addEventListener`, 화면 글자는 `textContent`.
+- 화면 크기 360px·1280px 에서 깨지지 않는지(@media), 한글 글꼴 지정.
+

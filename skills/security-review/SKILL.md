@@ -18,7 +18,7 @@ description: 코드 보안 점검(보안 리뷰·취약점·시크릿 노출·�
 |---|---|---|
 | 시크릿 | 코드·설정·테스트·로그에 키·토큰·비밀번호·개인키 | `(api[_-]?key|secret|token|passw(or)?d)\s*[:=]`, `-----BEGIN .*PRIVATE KEY-----`, `AKIA[0-9A-Z]{16}` |
 | 인젝션 | SQL 문자열 결합, 셸 명령 조립, eval/exec, 템플릿 직접 조립 | `execute\(.*(\+|%|f")`, `shell=True`, `os\.system`, `eval\(`, `exec\(`, `Invoke-Expression` |
-| XSS | 이스케이프 없는 HTML 출력 | `innerHTML`, `dangerouslySetInnerHTML`, `\|safe`, `mark_safe` |
+| XSS | 이스케이프 없는 HTML 출력, **인라인 이벤트 속성 안 데이터**(HTML 이스케이프로는 `'` 를 못 막는다) | `innerHTML`, `dangerouslySetInnerHTML`, `\|safe`, `mark_safe`, `onclick="[^"]*\$\{` |
 | 경로 이탈 | 사용자 입력으로 파일 경로 조립 | `open\(.*(request|input|args)`, `\.\./`, `Path\(.*\) / ` 뒤 resolve 검사 없음 |
 | 인증·권한 | 권한 확인 없는 엔드포인트, IDOR(남의 id 로 접근), 관리자 기능 노출 | 라우트 정의 근처의 권한 데코레이터·미들웨어 유무 |
 | 역직렬화 | 신뢰할 수 없는 데이터의 pickle/yaml.load/BinaryFormatter | `pickle\.loads?`, `yaml\.load\(` (SafeLoader 없이), `marshal` |
