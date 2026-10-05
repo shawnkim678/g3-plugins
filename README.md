@@ -21,6 +21,8 @@ G3 게이트웨이가 이 저장소를 커밋 고정으로 받아 라이선스·
 | `security-review` | 보안 점검(시크릿·인젝션·권한·SSRF 등) | 새로 작성 · MIT |
 | `tdd` | 시험 먼저 개발·회귀 시험 | 새로 작성 · MIT |
 | `debugging` | 재현→가설 검증→근본 원인 수정 | 새로 작성 · MIT |
+| `web-research` | 웹 검색·수집·교차 확인·출처 인용 (WebSearch·WebFetch) | 새로 작성 · MIT |
+| `api-integration` | 외부 REST API 연동·비밀 처리·재시도·시험 (HttpRequest·httpx) | 새로 작성 · MIT |
 | `frontend-design` | 개성 있는 웹 UI 디자인 | anthropics/claude-plugins-official · Apache-2.0 (수정) |
 | `code-review` | 코드·PR 리뷰 | 〃 code-review + pr-review-toolkit · Apache-2.0 (수정) |
 | `git-commit` | 커밋·푸시·PR·정리 | 〃 commit-commands · Apache-2.0 (수정) |
