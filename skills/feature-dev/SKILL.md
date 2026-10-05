@@ -1,6 +1,6 @@
 ---
 name: feature-dev
-description: Guided feature development workflow combining codebase exploration, architecture design, and implementation with quality reviews (feature development, architecture, implementation, design).
+description: Guided feature development workflow combining codebase exploration, architecture design, and implementation with quality reviews (feature development, architecture, implementation, design). (기능 개발·새 기능 구현·설계·아키텍처)
 ---
 
 <!-- Derived from anthropics/claude-plugins-official plugins/feature-dev/commands/feature-dev.md and agents/* (Apache-2.0). Adapted for G3 Code: consolidated agent workflows into sequential skill phases with direct tool execution. -->

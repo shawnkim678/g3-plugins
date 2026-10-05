@@ -1,6 +1,6 @@
 ---
 name: code-review
-description: Review code for bugs, style violations, security issues, and project guideline adherence. Checks CLAUDE.md compliance, identifies logic errors, and scores issues by confidence (code review, code quality, security, patterns, standards).
+description: Review code for bugs, style violations, security issues, and project guideline adherence. Checks CLAUDE.md compliance, identifies logic errors, and scores issues by confidence (code review, code quality, security, patterns, standards). (코드 리뷰·PR 리뷰·검토·버그 찾기)
 ---
 
 <!-- Derived from anthropics/claude-plugins-official plugins/code-review/commands/code-review.md and pr-review-toolkit/agents/code-reviewer.md (Apache-2.0). Adapted for G3 Code: simplified to linear review workflow without parallel agents; integrated code-reviewer agent guidance. -->

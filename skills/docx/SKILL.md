@@ -1,8 +1,6 @@
 ---
 name: docx
-description: |
-  Word 문서(.docx) 생성·편집·읽기. 보고서, 서신, 표가 있는 문서, 이력서, 
-  제안서 작성. Create, read, and edit Microsoft Word documents.
+description: Word 문서(.docx) 생성·편집·읽기 — 보고서·서신·제안서·이력서·표가 있는 문서, 한글 글꼴. Create, read and edit Microsoft Word documents.
 ---
 
 # DOCX 스킬 가이드

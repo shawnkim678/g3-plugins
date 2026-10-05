@@ -1,6 +1,6 @@
 ---
 name: git-commit
-description: Git workflow commands for committing, pushing, and managing branches. Includes commit creation, PR workflow, and cleanup of stale branches (git, commit, push, pull request, branch).
+description: Git workflow commands for committing, pushing, and managing branches. Includes commit creation, PR workflow, and cleanup of stale branches (git, commit, push, pull request, branch). (커밋·푸시·PR 만들기·브랜치 정리·git)
 ---
 
 <!-- Derived from anthropics/claude-plugins-official plugins/commit-commands/commands/commit.md, commit-push-pr.md, and clean_gone.md (Apache-2.0). Adapted for G3 Code: consolidated to single skill with subprocess workflow guidance. -->

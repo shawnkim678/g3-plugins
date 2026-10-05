@@ -1,8 +1,6 @@
 ---
 name: pdf
-description: |
-  PDF 파일 읽기·추출·병합·분할. 문서 처리, 데이터 추출, 보고서 생성.
-  Read, extract text, merge, split, and process PDF documents.
+description: PDF 읽기·텍스트·표 추출·분할·병합·회전·정보 조회. Read, extract, split, merge and inspect PDF files.
 ---
 
 # PDF 스킬 가이드

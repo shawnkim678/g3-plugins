@@ -1,6 +1,6 @@
 ---
 name: frontend-design
-description: Design guidance for distinctive, intentional visual UI. Helps with aesthetic direction, typography, and making design choices specific to each project (design, visual design, UI design, typography, aesthetic, palette).
+description: Design guidance for distinctive, intentional visual UI. Helps with aesthetic direction, typography, and making design choices specific to each project (design, visual design, UI design, typography, aesthetic, palette). (웹 페이지·랜딩 페이지·UI·화면 디자인·HTML·CSS·프론트엔드)
 ---
 
 <!-- Derived from anthropics/claude-plugins-official plugins/frontend-design/skills/frontend-design/SKILL.md (Apache-2.0). Adapted for G3 Code. -->

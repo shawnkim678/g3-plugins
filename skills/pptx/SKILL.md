@@ -1,8 +1,6 @@
 ---
 name: pptx
-description: |
-  PowerPoint 프레젠테이션(.pptx) 생성·편집. 슬라이드쇼, 발표자료, 
-  회의 자료. Create and edit PowerPoint presentations and slide decks.
+description: PowerPoint 발표 자료(.pptx) 생성·편집 — 슬라이드·발표·프레젠테이션·표·도형. Create and edit PowerPoint presentations.
 ---
 
 # PPTX 스킬 가이드

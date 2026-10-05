@@ -1,8 +1,6 @@
 ---
 name: xlsx
-description: |
-  엑셀 스프레드시트(.xlsx) 생성·편집·읽기. 표, 수식, 차트, 데이터 분석.
-  Create, read, and edit Excel spreadsheets with formulas and formatting.
+description: Excel 스프레드시트(.xlsx) 생성·편집 — 표·합계·수식·차트·서식·시트. Create and edit Excel workbooks with formulas and formatting.
 ---
 
 # XLSX 스킬 가이드

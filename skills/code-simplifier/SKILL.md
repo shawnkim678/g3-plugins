@@ -1,6 +1,6 @@
 ---
 name: code-simplifier
-description: Simplifies and refines code for clarity, consistency, and maintainability while preserving functionality (code simplification, refactoring, clarity, consistency, readability).
+description: Simplifies and refines code for clarity, consistency, and maintainability while preserving functionality (code simplification, refactoring, clarity, consistency, readability). (코드 단순화·리팩터링·정리·가독성)
 ---
 
 <!-- Derived from anthropics/claude-plugins-official plugins/code-simplifier/agents/code-simplifier.md (Apache-2.0). Adapted for G3 Code: converted from agent guidance to skill workflow. -->
