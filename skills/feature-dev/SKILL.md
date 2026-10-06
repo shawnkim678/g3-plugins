@@ -150,6 +150,15 @@ Do not start without explicit user approval of the chosen approach
    - Do new components follow existing architectural patterns?
    - Is there adequate documentation/comments?
 
+   **Can a real user actually run it?** (G3 Code — web apps with login)
+   - First admin: there must be a way to create the first admin without a public sign-up —
+     e.g. env-var seed (`SALON_ADMIN_USER` / `SALON_ADMIN_PASSWORD`, refuse weak/default passwords) or a CLI
+     (`python -m app create-admin`). An app whose real DB has 0 users and no seed path is unusable.
+   - Secrets: if `SECRET_KEY` is missing, refuse to start (no hard-coded fallback).
+   - Real DB matches the models: if you changed models, recreate/migrate the dev DB (not only the test DB).
+   - Tests seed their own admin in the fixture (create_all → seed → override), so login tests don't all fail with 401.
+   - README (how to set env vars, create the admin, run), `requirements.txt`, `.gitignore` (`.venv`, `*.db`, `.env`).
+
 2. Consolidate findings and identify highest priority issues
 3. **Present findings to user**:
    - What works well
