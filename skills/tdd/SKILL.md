@@ -36,6 +36,36 @@ description: 시험 먼저 개발(TDD)·테스트 작성·테스트 실행. Test
   윈도우 PowerShell: `"10 + 20`n3 * 4`nq" | python calc.py` (`<` 리다이렉트는 PowerShell 에서 안 된다).
 - 네트워크·시간·난수: 주입 가능한 매개변수로 바꾸거나 시험에서 대체(mock/monkeypatch)한다. 실제 외부 서버에 의존하는 시험은 쓰지 않는다.
 
+## DB 를 쓰는 웹앱 시험 (FastAPI·SQLAlchemy 예)
+- 시험 DB 는 실제 `salon.db` 같은 파일이 아니라 `tmp_path` 의 새 파일(또는 메모리)로. 순서는 **엔진 만들기 → `create_all` → 시드(관리자 계정 등) → 앱 의존성 바꾸기**.
+  `no such table` 이 나오면 거의 항상 이 순서가 틀렸거나 앱이 다른 엔진을 보고 있다 — 픽스처를 고치기 전에 앱이 어느 엔진을 쓰는지 Read 로 확인한다.
+  ```python
+  # tests/conftest.py
+  import pytest
+  from fastapi.testclient import TestClient
+  from sqlalchemy import create_engine
+  from sqlalchemy.orm import sessionmaker
+  from database import Base, get_db
+  from main import app
+
+  @pytest.fixture
+  def client(tmp_path):
+      engine = create_engine(f"sqlite:///{tmp_path/'test.db'}", connect_args={"check_same_thread": False})
+      Base.metadata.create_all(engine)                      # 1) 표 먼저
+      TestSession = sessionmaker(bind=engine)
+      with TestSession() as s:                              # 2) 시드
+          seed_admin(s)                                     #    (프로젝트의 시드 함수)
+      def _db():
+          with TestSession() as s:
+              yield s
+      app.dependency_overrides[get_db] = _db                # 3) 앱이 시험 DB 를 보게
+      with TestClient(app) as c:
+          yield c
+      app.dependency_overrides.clear()
+  ```
+- 통과하던 시험 수가 줄면(예: 28 → 0) 그 직전 편집이 원인이다. 더 고치기 전에 그 편집을 되돌리고 다른 방법을 찾는다.
+- 화면 경로(`/`, `/login` …)도 시험에 넣는다: `assert client.get("/login").status_code == 200`.
+
 ## 보고
 - 추가한 시험 목록, 실행 명령, **실행 결과 원문 마지막 줄**(예: `12 passed in 0.31s`), 출발점 대비 변화.
 - 통과하지 못한 시험이 있으면 숨기지 않고 실패 메시지와 함께 보고한다.
