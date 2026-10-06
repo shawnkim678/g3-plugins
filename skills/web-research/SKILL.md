@@ -45,6 +45,11 @@ description: 웹 자료 조사·검색·자료 수집·최신 정보 확인·출
   | 통계 | 통계청 KOSIS(kosis.kr) |
   | 공시·주가 | 전자공시 DART(dart.fss.or.kr), 한국거래소 |
   | 소프트웨어 버전 | 공식 문서·릴리스 노트·GitHub Releases |
+- ★**1차 출처 URL 을 먼저 WebFetch 한다.** 검색 결과에 1차 출처가 없어도 위 표의 공식 주소를 직접 연다. 예:
+  - 환율: `WebFetch {url: "http://www.smbs.biz/ExRate/TodayExRate.jsp", prompt: "오늘 USD 매매기준율"}` → 막히거나 비어 있으면
+    `https://ecos.bok.or.kr` 의 통계 검색, 그다음 시중은행 고시 환율 페이지.
+  - 법령: `https://www.law.go.kr/법령/<법령명>` · 통계: `https://kosis.kr` · 공시: `https://dart.fss.or.kr`
+  - 공식 출처가 JS 전용·403 이라 못 열면 그 사실(URL·상태 코드)을 보고서 「확인하지 못한 것」에 적고, 그다음에 집계 사이트 2곳으로 교차 확인한다.
 - 각 사실마다 메모: `사실 | 출처 URL | 게시/갱신 날짜 | 원문 인용 한 줄`.
 
 ## 3. 교차 확인
